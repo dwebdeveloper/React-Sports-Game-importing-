@@ -74,7 +74,7 @@ class Game extends Component {
                 <ScoreBoard
                     homeTeamStats={this.state.homeTeamStats}
                     visitingTeamStats={this.state.visitingTeamStats}
-                />s
+                />
                 <h1>Welcome to {this.props.venue}</h1>
                 <div className="stats">
                     <Team
