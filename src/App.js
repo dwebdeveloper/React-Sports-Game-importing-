@@ -1,26 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Game from './components/game/Game.js';
+import Lincoln from './assets/Abe_Lincoln.jpg';
+import George from './assets/Its_George.jpg';
+import KGeorge from './assets/king-george.jpg';
+import KJames from './assets/king-james.jpg';
 
-function App() {
+function App(props) {
+
+  const kingJ = {
+    name: "King James",
+    logoSrc: KJames
+  }
+
+  const kingG = {
+    name: "King George",
+    logoSrc: KGeorge
+  }
+
+  const TheGeorge = {
+    name: "George Washington",
+    logoSrc: George
+  }
+
+  const Abe = {
+    name: "Abraham Lincoln",
+    logoSrc: Lincoln
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Game
+        venue="The Kings Throne"
+        homeTeam={kingJ}
+        visitingTeam={kingG}
+      />
+      <Game
+        venue="Fight Island"
+        homeTeam={TheGeorge}
+        visitingTeam={Abe}
+      />
     </div>
-  );
-}
+  )
+};
 
 export default App;
